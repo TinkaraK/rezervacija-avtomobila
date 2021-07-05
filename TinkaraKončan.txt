@@ -1,0 +1,24 @@
+ime- Tinkara
+menjalnik- rocni
+dodatno- ne
+datumPrevzema- 2021-04-21
+priimek- Končan
+krajVracila- Maribor
+uraPrevzema- 15:00
+gorivo- dizel
+stKartice- x
+datumVracila- 2021-04-22
+naslov- Naslov 1
+nacinPlacila- gotovina
+velikost- srednji
+krajPrevzema- Ljubljana
+starost- 18
+telefon- 123456789
+ccv- x
+znamkaModel- Toyota Avensis
+vozniski- 2
+mesto- Mesto
+cena- Cena na dan: 75 €, skupaj cena 75 €
+uraVracila- 12:00
+email- mail@mail.com
+postnaStevilka- 1234

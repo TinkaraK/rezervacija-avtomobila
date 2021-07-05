@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <TabPane fx:id="tabpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="33.0" tabMaxWidth="100.0" tabMinHeight="33.0" tabMinWidth="33.0">
+              <tabs>
+                <Tab fx:id="najemTP" text="Najem">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                           <children>
+                              <GridPane alignment="CENTER" layoutX="169.0" layoutY="170.0" prefHeight="357.0" prefWidth="709.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="301.0" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="56.0" vgrow="ALWAYS" />
+                                </rowConstraints>
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="title" text="Prevzem" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                          <GridPane layoutX="28.0" layoutY="31.0" prefWidth="296.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" percentHeight="33.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" percentHeight="33.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" percentHeight="33.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label maxWidth="1.7976931348623157E308" text="datum prevzema" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                                                <Label maxWidth="1.7976931348623157E308" text="kraj prevzema" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                                <Label maxWidth="1.7976931348623157E308" text="ura prevzema" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                                                <ComboBox fx:id="krajPrevzema" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Izberite kraj" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></ComboBox>
+                                                <ComboBox fx:id="uraPrevzema" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Izberite uro" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></ComboBox>
+                                                <DatePicker fx:id="datumPrevzema" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="188.0" promptText="Izberite datum" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></DatePicker>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="title" text="Vračilo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="15.0" />
+                                          <GridPane layoutX="28.0" layoutY="31.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label maxWidth="1.7976931348623157E308" text="datum vračila" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                                                <Label maxWidth="1.7976931348623157E308" text="kraj vračila" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                                <Label maxWidth="1.7976931348623157E308" text="ura vračila" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                                                <ComboBox fx:id="krajVracila" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Izberite kraj" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></ComboBox>
+                                                <ComboBox fx:id="uraVracila" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Izberite uro" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></ComboBox>
+                                                <DatePicker fx:id="datumVracila" maxWidth="1.7976931348623157E308" promptText="Izberite datum" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <effect>
+                                                      <InnerShadow />
+                                                   </effect></DatePicker>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriIzbiro" text="Naprej">
+                                             <VBox.margin>
+                                                <Insets right="30.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="izbiraTP" disable="true" text="Izbira vozila">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="357.0" prefWidth="709.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="404.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="68.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="301.0" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="56.0" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="56.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriPrejsnjega" text="Nazaj" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriNajemnika" text="Naprej" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
+                                       <children>
+                                          <GridPane layoutX="176.0" layoutY="59.0" prefHeight="166.0" prefWidth="336.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Label maxWidth="1.7976931348623157E308" text="velikost vozila" VBox.vgrow="ALWAYS" />
+                                                      <RadioButton fx:id="velik" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#prikaziSpecificnaVozila" text="velik" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="velikostVozila" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="srednji" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#prikaziSpecificnaVozila" selected="true" text="srednji" toggleGroup="$velikostVozila" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="majhen" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#prikaziSpecificnaVozila" text="majhen" toggleGroup="$velikostVozila" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets bottom="15.0" left="20.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Label prefHeight="56.0" prefWidth="320.0" text="znamka in model vozila" VBox.vgrow="ALWAYS" />
+                                                      <ComboBox fx:id="znamkaModel" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Izberite znamko in model" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" right="50.0" />
+                                                         </VBox.margin>
+                                                      </ComboBox>
+                                                      <Label>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="91.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="vrsta motorja" VBox.vgrow="ALWAYS" />
+                                                      <RadioButton fx:id="bencin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="bencin" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="vrstaMotorja" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="dizel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="dizel" toggleGroup="$vrstaMotorja" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <Label layoutX="10.0" layoutY="91.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="menjalnik" VBox.vgrow="ALWAYS" />
+                                                      <RadioButton fx:id="rocni" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="ročni" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="menjalnik" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="avtomatski" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="avtomatski" toggleGroup="$menjalnik" VBox.vgrow="ALWAYS">
+                                                         <VBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                      <Label>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets top="20.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </GridPane>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="title" text="Izbira vozila" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="najemnikTP" disable="true" text="Podatki o najemniku">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="357.0" prefWidth="709.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="404.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="68.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="301.0" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="56.0" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="56.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriPrejsnjega" text="Nazaj" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriPlacilo" text="Naprej" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <GridPane layoutX="46.0" layoutY="20.0" prefHeight="212.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label maxWidth="1.7976931348623157E308" text="ime" />
+                                                <Label maxWidth="1.7976931348623157E308" text="priimek" GridPane.rowIndex="1" />
+                                                <Label maxWidth="1.7976931348623157E308" text="naslov" GridPane.rowIndex="2" />
+                                                <Label maxWidth="1.7976931348623157E308" text="mesto" GridPane.rowIndex="3" />
+                                                <Label maxWidth="1.7976931348623157E308" text="poštna številka" GridPane.rowIndex="4" />
+                                                <Label maxWidth="1.7976931348623157E308" text="e-mail" GridPane.columnIndex="2" />
+                                                <Label maxWidth="1.7976931348623157E308" text="telefon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Label maxWidth="1.7976931348623157E308" text="starost" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <Label maxWidth="1.7976931348623157E308" text="vozniški izpit (leta)" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <TextField fx:id="ime" maxWidth="1.7976931348623157E308" promptText="Vpišite ime" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="priimek" maxWidth="1.7976931348623157E308" promptText="Vpišite priimek" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="naslov" maxWidth="1.7976931348623157E308" promptText="Vpišite naslov" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="mesto" maxWidth="1.7976931348623157E308" promptText="Vpišite mesto" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="postnaSt" maxWidth="1.7976931348623157E308" promptText="Vpišite poštno številko" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="email" maxWidth="1.7976931348623157E308" promptText="Vpišite e-mail naslov" GridPane.columnIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="telefon" maxWidth="1.7976931348623157E308" promptText="Vpišite telefon" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Spinner fx:id="starost" accessibleText="Vpišite starost" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </Spinner>
+                                                <Spinner fx:id="vozniski" editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </Spinner>
+                                             </children>
+                                          </GridPane>
+                                          <Label layoutX="32.0" layoutY="14.0" styleClass="title" text="Podatki o najemniku" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="cenaTP" disable="true" text="Cena in plačilo">
+                     <content>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                           <children>
+                              <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="357.0" prefWidth="709.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="404.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="68.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="301.0" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="56.0" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#zakljuciCB" text="Zaključi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="56.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriPrejsnjega" text="Nazaj" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3">
+                                       <children>
+                                          <GridPane layoutX="215.0" layoutY="72.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="45.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label maxWidth="1.7976931348623157E308" text="cena" GridPane.rowIndex="1" />
+                                                <Label maxWidth="1.7976931348623157E308" text="način plačila" GridPane.rowIndex="4" />
+                                                <Label maxWidth="1.7976931348623157E308" text="številka kreditne kartice" GridPane.rowIndex="5" />
+                                                <Label maxWidth="1.7976931348623157E308" text="CCV koda" GridPane.rowIndex="6" />
+                                                <TextField fx:id="cena" editable="false" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <RadioButton fx:id="kartica" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#odblokirajKartico" selected="true" text="kartica">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="placilo" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="gotovina" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#blokirajKartico" text="gotovina" toggleGroup="$placilo">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </HBox>
+                                                <Label maxWidth="1.7976931348623157E308" text="dodatno avtomobilsko zavarovanje (+ 2 €)" />
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <RadioButton fx:id="dodatnoDa" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="da">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="dodatnoZav" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="dodatnoNe" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ne" toggleGroup="$dodatnoZav">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+                                                   <children>
+                                                      <Button fx:id="izracunCene" mnemonicParsing="false" onAction="#izracunajCeno" text="Izračunaj">
+                                                         <VBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </VBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </VBox>
+                                                <TextField fx:id="stKartice" promptText="XXXX-XXXX-XXXX-XXXX" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="ccv" promptText="XXX" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                             </children>
+                                          </GridPane>
+                                          <Label layoutX="26.0" layoutY="6.0" styleClass="title" text="Cena" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                          <Label layoutX="15.0" layoutY="156.0" styleClass="title" text="Način plačila" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab id="potrditevTP" fx:id="potrditevTP" disable="true" onSelectionChanged="#prikaziPotrditev" text="Potrditev">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="anchor-pane">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="357.0" prefWidth="709.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="404.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="68.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="301.0" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="56.0" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="56.0" prefWidth="416.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#odpriPrejsnjega" text="Nazaj" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#shraniCB" text="Potrdi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" styleClass="title" text="Potrditev" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                          <GridPane layoutX="28.0" layoutY="32.0" prefHeight="274.0" prefWidth="636.0" AnchorPane.bottomAnchor="-22.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="194.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <TextArea fx:id="potrditevZaAvto" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="252.0" prefWidth="111.0" text="dfghjkl" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" right="10.0" />
+                                                   </GridPane.margin>
+                                                </TextArea>
+                                                <TextArea fx:id="potrditevZaNarocnika" editable="false" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="252.0" prefWidth="111.0" text="dfghjkl" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" />
+                                                   </GridPane.margin>
+                                                </TextArea>
+                                                <TextArea fx:id="potrditevZaCeno" editable="false" layoutX="328.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="94.0" prefWidth="308.0" text="dfghjkl" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                                   <GridPane.margin>
+                                                      <Insets right="10.0" />
+                                                   </GridPane.margin>
+                                                </TextArea>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button maxWidth="1.7976931348623157E308" onAction="#odpriCB" text="_Odpri" />
+                  <Separator orientation="VERTICAL" />
+                  <Button layoutX="10.0" layoutY="13.0" maxWidth="1.7976931348623157E308" onAction="#ponastaviCB" text="_Ponastavi" />
+                  <Separator orientation="VERTICAL" />
+                  <Button layoutX="66.0" layoutY="13.0" maxWidth="1.7976931348623157E308" onAction="#zapriCB" text="_Zapri" />
+                  <Separator orientation="VERTICAL" />
+                  <Button layoutX="131.0" layoutY="13.0" maxWidth="1.7976931348623157E308" onAction="#pomocCB" text="_Pomoč" />
+              </items>
+            </ToolBar>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

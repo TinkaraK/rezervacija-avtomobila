@@ -1,0 +1,229 @@
+* {
+    -fx-primary: #2a2e37;
+    -fx-secondary: #e8f6fe;
+    -fx-borders: #FFFF8D;
+    -fx-insidetxt: #bfc0c3;
+    -fx-buttontxt: #b2b2b2;
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+
+.button {
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-borders;
+    -fx-border-radius: 5px;
+    -fx-text-fill: -fx-buttontxt;
+    -fx-margin-right: 10px;
+    -fx-font-weight: bold;
+}
+
+.button:hover, .button:focused {
+    -fx-background-color: -fx-borders;
+    -fx-border-color:-fx-secondary;
+    -fx-text-fill: -fx-primary;
+    -fx-border-radius: 20px;
+
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.tool-bar {
+    -fx-background-color: derive(-fx-primary, 10%);
+
+}
+.tool-bar .button {
+    -fx-border-color: transparent;
+    -fx-border-radius: 0px;
+    -fx-text-fill: -fx-buttontxt;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+    -fx-margin: 0px;
+    -fx-font-size: 14px;
+}
+.tool-bar .button:hover{
+    -fx-text-fill: -fx-borders;
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-borders;
+
+}
+
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-primary;
+    -fx-margin: 10px;
+}
+
+
+.tab{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-label{
+    -fx-text-fill: -fx-secondary;
+    -fx-font-size: 10pt;
+}
+
+.tab:selected {
+    -fx-background-color:  derive(-fx-primary, 20%);
+    -fx-text-base-color: red;
+    -fx-border-color: -fx-borders;
+    -fx-border-radius: 1px;
+}
+.tab-main{
+    -fx-pref-height : 60;
+    -fx-max-height : 60;
+}
+
+.anchor-pane {
+    -fx-background-color: -fx-primary;
+    -fx-border-insets: 1 1 1 1;
+    -fx-border-color: derive(-fx-primary, 50%);
+
+    -fx-border-radius: 2px;
+}
+.menu-bar {
+    -fx-background-color: -fx-primary;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.title {
+    -fx-text-fill: -fx-secondary;
+    -fx-font-weight: bold;
+    -fx-background-color: inherit;
+    -fx-font-size: 13px;
+}
+
+.text-field, .combo-box {
+    -fx-background-color: -fx-primary;
+    -fx-border-radius: 5px;
+    -fx-border-color:-fx-borders;
+    -fx-prompt-text-fill: #b9b9b9;
+    -fx-text-fill: white;
+}
+
+.text-field.error , .spinner.error, .combo-box.error, .date-picker.error{
+    -fx-border-color: red;
+}
+
+.text-area {
+     -fx-font-family: Helvetica;
+     -fx-font-size: 13px;
+}
+
+.text-area .text {
+     -fx-text-fill: white;
+     -fx-line-spacing: 5px;
+}
+  .text-area .content{
+      -fx-background-color: derive(-fx-primary, 90%);
+     -fx-text-fill: white;
+  }
+.combo-box .arrow-button{
+    -fx-body-color: #d6e1ff;
+    -fx-border-radius: 3px;
+    -fx-border-style: none;
+}
+
+.combo-box .text {
+    -fx-prompt-text-fill: blue;
+    -fx-body-color: #d6e1ff;
+}
+
+.combo-box .combo-box-popup .list-view, .combo-box .combo-box-popup .list-cell {
+    -fx-background-color: derive(-fx-primary, 10%);
+    -fx-text-fill: white ;
+}
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-text-fill: yellow ;
+    -fx-background-color: -fx-borders ;
+}
+
+.combo-box .cell:selected {
+
+}
+
+
+.radio-button:hover {
+    -fx-underline: true;
+}
+
+.radio-button {
+    -fx-text-fill: white;
+}
+.radio-button .radio {
+    -fx-background-color: #b2b2b2;
+    -fx-border-color:-fx-borders;
+    -fx-border-radius: 20px;
+    -fx-text-fill: white;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: -fx-primary;
+    -fx-background-insets: 0;
+}
+.spinner {
+    -fx-background-color: -fx-primary;
+
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-body-color: -fx-primary;
+    -fx-border-color: -fx-borders;
+    -fx-border-radius: 3px;
+    -fx-background-color: transparent;
+}
+
+.increment-arrow, .decrement-arrow {
+    -fx-background-color: -fx-borders;
+}
+
+.arrow-button .arrow { /jdk1.8.x/jre/lib/ext/jfxrt.jar
+    -fx-background-color: -fx-borders;
+}
+.choice-box .arrow {
+    -fx-background-color:-fx-borders;
+}
+.date-picker {
+    -fx-body-color: -fx-primary;
+    -fx-text-fill: -fx-borders;
+    -fx-border-color: transparent;
+    -fx-border-radius: 3px;
+    -fx-border-color: #c9d7ff;
+
+}
+.date-picker-popup {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup >* > .day-cell:hover{
+    -fx-background-color:-fx-borders;
+
+}
+
+
+
+.date-picker > .date-picker-display-node {
+    -fx-body-color: -fx-primary;
+    -fx-text-fill: white;
+    -fx-border-color: -fx-borders;
+    -fx-border-radius: 3px;
+}
+.date-picker .text-field {
+    -fx-control-inner-background: white ;
+}
+
+.combo-box-base .text{
+    -fx-fill: rgb(130.0, 130.0, 130.0);
+}
